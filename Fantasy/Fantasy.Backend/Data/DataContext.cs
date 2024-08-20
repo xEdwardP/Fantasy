@@ -9,7 +9,7 @@ namespace Fantasy.Backend.Data
         {
         }
 
-        DbSet<Country> Countries { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
