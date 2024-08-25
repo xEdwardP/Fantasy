@@ -3,7 +3,7 @@
 <h3>@Localizer["Countries"]</h3>
 
 <div class="mb-3">
-    <a class="btn btn-outline-primary btn-sm text-end" href="/countries/create">@Localizer["New"] @Localizer["Country"]</a>
+    <a class="btn btn-primary" href="/countries/create">@Localizer["New"] @Localizer["Country"]</a>
 </div>
 
 <GenericList MyList="Countries">
@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th>@Localizer["Country"]</th>
-                    <th></th>
+                    <th>@Localizer["Actions"]</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,8 +23,8 @@
                             @country.Name
                         </td>
                         <td>
-                            <a class="btn btn-outline-warning btn-sm">@Localizer["Edit"]</a>
-                            <button class="btn btn-outline-danger btn-sm">@Localizer["Delete"]</button>
+                            <a class="btn btn-outline-warning btn-sm" href="/countries/edit/@country.Id">@Localizer["Edit"]</a>
+                            <button class="btn btn-outline-danger btn-sm" @onclick=@(() => DeleteAsync(country))>@Localizer["Delete"]</button>
                         </td>
                     </tr>
                 }

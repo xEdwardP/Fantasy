@@ -150,4 +150,91 @@
   <data name="Country" xml:space="preserve">
     <value>Pais</value>
   </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmacion</value>
+  </data>
+  <data name="LeaveAndLoseChanges" xml:space="preserve">
+    <value>¿Deseas abandonar la página y perder los cambios?</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Guardar Cambios</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Regresar</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="RecordSavedOk" xml:space="preserve">
+    <value>Registro guardado con éxito.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>¿Está seguro de borrar el {0}: {1}?</value>
+  </data>
+  <data name="RecordDeletedOk" xml:space="preserve">
+    <value>Registro borrado con éxito.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="ERR001" xml:space="preserve">
+    <value>Registro no encontrado.</value>
+  </data>
+  <data name="ERR002" xml:space="preserve">
+    <value>No se puede borrar, porque tiene registros relacionados.</value>
+  </data>
+  <data name="ERR003" xml:space="preserve">
+    <value>Ya existe el registro que estas intentando crear.</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Equipo</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>El campo {0} no puede tener más de {1} caracteres.</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>El campo {0} es obligatorio.</value>
+  </data>
+  <data name="ERR004" xml:space="preserve">
+    <value>El código del país no es válido.</value>
+  </data>
+  <data name="ERR005" xml:space="preserve">
+    <value>El código del equipo no es válido.</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Seleccione un archivo</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Teams" xml:space="preserve">
+    <value>Equipos</value>
+  </data>
+  <data name="SelectACountry" xml:space="preserve">
+    <value>Selecciona un País</value>
+  </data>
+  <data name="RecordsNumber" xml:space="preserve">
+    <value>Número de Registros</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="Clean" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="RecordCreatedOk" xml:space="preserve">
+    <value>Registro creado con éxito.</value>
+  </data>
 </root>
