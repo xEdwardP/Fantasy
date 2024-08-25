@@ -9,5 +9,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7169") });
 builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddLocalization(); // Paquete multi idiomas
 
 await builder.Build().RunAsync();
