@@ -259,7 +259,7 @@ namespace Fantasy.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Field {0} cannot be longer than {1} characters..
+        ///   Looks up a localized string similar to The field {0} cannot be longer than {1} characters..
         /// </summary>
         public static string MaxLength {
             get {
@@ -322,7 +322,7 @@ namespace Fantasy.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Field {0} is required..
+        ///   Looks up a localized string similar to The field {0} is required..
         /// </summary>
         public static string RequiredField {
             get {

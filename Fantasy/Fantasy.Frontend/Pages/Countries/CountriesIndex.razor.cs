@@ -4,6 +4,7 @@ using Fantasy.Shared.Entites;
 using Fantasy.Shared.Resources;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using System.Net;
 
 namespace Fantasy.Frontend.Pages.Countries;
 
@@ -23,14 +24,14 @@ public partial class CountriesIndex
 
     private async Task LoadAsync()
     {
-        var responseHppt = await Repository.GetAsync<List<Country>>("api/countries");
-        if (responseHppt.Error)
+        var responseHttp = await Repository.GetAsync<List<Country>>("api/countries");
+        if (responseHttp.Error)
         {
-            var message = await responseHppt.GetErrorMessageAsync();
+            var message = await responseHttp.GetErrorMessageAsync();
             await SweetAlertService.FireAsync(Localizer["Error"], message, SweetAlertIcon.Error);
             return;
         }
-        Countries = responseHppt.Response!;
+        Countries = responseHttp.Response!;
     }
 
     private async Task DeleteAsync(Country country)
@@ -54,14 +55,14 @@ public partial class CountriesIndex
         var responseHttp = await Repository.DeleteAsync($"api/countries/{country.Id}");
         if (responseHttp.Error)
         {
-            if (responseHttp.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (responseHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
             {
                 NavigationManager.NavigateTo("/");
             }
             else
             {
-                var mensajeError = await responseHttp.GetErrorMessageAsync();
-                await SweetAlertService.FireAsync(Localizer["Error"], mensajeError, SweetAlertIcon.Error);
+                var messageError = await responseHttp.GetErrorMessageAsync();
+                await SweetAlertService.FireAsync(Localizer["Error"], Localizer[messageError!], SweetAlertIcon.Error);
             }
             return;
         }
