@@ -12,16 +12,15 @@
             <thead>
                 <tr>
                     <th>@Localizer["Country"]</th>
-                    <th>@Localizer["Actions"]</th>
+                    <th># @Localizer["Teams"]</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var country in Countries!)
                 {
                     <tr>
-                        <td>
-                            @country.Name
-                        </td>
+                        <td>@country.Name</td>
+                        <td>@country.TeamsCount</td>
                         <td>
                             <a class="btn btn-outline-warning btn-sm" href="/countries/edit/@country.Id">@Localizer["Edit"]</a>
                             <button class="btn btn-outline-danger btn-sm" @onclick=@(() => DeleteAsync(country))>@Localizer["Delete"]</button>
