@@ -1,4 +1,6 @@
 using Fantasy.Backend.Data;
+using Fantasy.Backend.Helpers.Implementations;
+using Fantasy.Backend.Helpers.Interfaces;
 using Fantasy.Backend.Repositories.Implementations;
 using Fantasy.Backend.Repositories.Interfaces;
 using Fantasy.Backend.UnitsOfWork.Implementations;
@@ -16,10 +18,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=LocalConnection"));
 builder.Services.AddTransient<SeedDb>();
+builder.Services.AddScoped<IFileStorage, FileStorage>();
 builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<ICountriesUnitOfWork, CountriesUnitOfWork>();
+builder.Services.AddScoped<ITeamsRepository, TeamsRepository>();
+builder.Services.AddScoped<ITeamsUnitOfWork, TeamsUnitOfWork>();
 
 
 var app = builder.Build();
