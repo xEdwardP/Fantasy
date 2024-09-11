@@ -1,4 +1,5 @@
-﻿using Fantasy.Shared.Entites;
+﻿using Fantasy.Backend.Helpers.Interfaces;
+using Fantasy.Shared.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fantasy.Backend.Data;
@@ -6,10 +7,12 @@ namespace Fantasy.Backend.Data;
 public class SeedDb
 {
     private readonly DataContext _context;
+    private readonly IFileStorage _fileStorage;
 
-    public SeedDb(DataContext context)
+    public SeedDb(DataContext context, IFileStorage fileStorage)
     {
         _context = context;
+        _fileStorage = fileStorage;
     }
 
     public async Task SeedAsync()
@@ -34,15 +37,14 @@ public class SeedDb
         {
             foreach (var country in _context.Countries)
             {
-                _context.Teams.Add(new Team { Name = country.Name, Country = country! });
-                if (country.Name == "Honduras")
+                var imagePath = string.Empty;
+                var filePath = $"{Environment.CurrentDirectory}\\Images\\Flags\\{country.Name}.png";
+                if (File.Exists(filePath))
                 {
-                    _context.Teams.Add(new Team { Name = "CD Olimpia", Country = country! });
-                    _context.Teams.Add(new Team { Name = "CD Marathon", Country = country! });
-                    _context.Teams.Add(new Team { Name = "Real España", Country = country! });
-                    _context.Teams.Add(new Team { Name = "CD Motagua", Country = country! });
-                    _context.Teams.Add(new Team { Name = "Deportes Savio", Country = country! });
+                    var fileBytes = File.ReadAllBytes(filePath);
+                    imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "teams");
                 }
+                _context.Teams.Add(new Team { Name = country.Name, Country = country!, Image = imagePath });
             }
 
             await _context.SaveChangesAsync();
