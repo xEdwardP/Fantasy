@@ -1,4 +1,5 @@
 ﻿using Fantasy.Backend.Data;
+using Fantasy.Backend.Helpers;
 using Fantasy.Backend.Helpers.Interfaces;
 using Fantasy.Backend.Repositories.Interfaces;
 using Fantasy.Shared.DTOs;
@@ -171,5 +172,44 @@ public class TeamsRepository : GenericRepository<Team>, ITeamsRepository
                 Message = exception.Message
             };
         }
+    }
+
+    public override async Task<ActionResponse<IEnumerable<Team>>> GetAsync(PaginationDTO pagination)
+    {
+        var queryable = _context.Teams
+            .Include(x => x.Country)
+            .AsQueryable();
+
+
+        if (!string.IsNullOrWhiteSpace(pagination.Filter))
+        {
+            queryable = queryable.Where(x => x.Country!.Name.ToLower().Contains(pagination.Filter.ToLower()));
+        }
+
+        return new ActionResponse<IEnumerable<Team>>
+        {
+            WasSuccess = true,
+            Result = await queryable
+                .OrderBy(x => x.Name)
+                .Paginate(pagination)
+                .ToListAsync()
+        };
+    }
+
+    public async Task<ActionResponse<int>> GetTotalRecordsAsync(PaginationDTO pagination)
+    {
+        var queryable = _context.Teams.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(pagination.Filter))
+        {
+            queryable = queryable.Where(x => x.Country!.Name.ToLower().Contains(pagination.Filter.ToLower()));
+        }
+
+        double count = await queryable.CountAsync();
+        return new ActionResponse<int>
+        {
+            WasSuccess = true,
+            Result = (int)count
+        };
     }
 }

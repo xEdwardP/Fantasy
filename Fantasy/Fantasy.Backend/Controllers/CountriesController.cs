@@ -1,4 +1,5 @@
 ﻿using Fantasy.Backend.UnitsOfWork.Interfaces;
+using Fantasy.Shared.DTOs;
 using Fantasy.Shared.Entites;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,17 @@ public class CountriesController : GenericController<Country>
         return Ok(await _countriesUnitOfWork.GetComboAsync());
     }
 
+    [HttpGet("totalRecordsPaginated")]
+    public async Task<IActionResult> GetTotalRecordsAsync([FromQuery] PaginationDTO pagination)
+    {
+        var action = await _countriesUnitOfWork.GetTotalRecordsAsync(pagination);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return BadRequest();
+    }
+
     [HttpGet]
     public override async Task<IActionResult> GetAsync()
     {
@@ -41,5 +53,16 @@ public class CountriesController : GenericController<Country>
             return Ok(response.Result);
         }
         return NotFound(response.Message);
+    }
+
+    [HttpGet("paginated")]
+    public override async Task<IActionResult> GetAsync(PaginationDTO pagination)
+    {
+        var response = await _countriesUnitOfWork.GetAsync(pagination);
+        if (response.WasSuccess)
+        {
+            return Ok(response.Result);
+        }
+        return BadRequest();
     }
 }

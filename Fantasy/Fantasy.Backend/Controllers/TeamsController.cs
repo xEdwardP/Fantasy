@@ -16,6 +16,45 @@ public class TeamsController : GenericController<Team>
         _teamsUnitOfWork = teamsUnitOfWork;
     }
 
+    [HttpGet("combo/{countryId:int}")]
+    public async Task<IActionResult> GetComboAsync(int countryId)
+    {
+        return Ok(await _teamsUnitOfWork.GetComboAsync(countryId));
+    }
+
+    [HttpPost("full")]
+    public async Task<IActionResult> PostAsync(TeamDTO teamDTO)
+    {
+        var action = await _teamsUnitOfWork.AddAsync(teamDTO);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return BadRequest(action.Message);
+    }
+
+    [HttpGet("totalRecordsPaginated")]
+    public async Task<IActionResult> GetTotalRecordsAsync([FromQuery] PaginationDTO pagination)
+    {
+        var action = await _teamsUnitOfWork.GetTotalRecordsAsync(pagination);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return BadRequest();
+    }
+
+    [HttpPut("full")]
+    public async Task<IActionResult> PutAsync(TeamDTO teamDTO)
+    {
+        var action = await _teamsUnitOfWork.UpdateAsync(teamDTO);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return BadRequest(action.Message);
+    }
+
     [HttpGet]
     public override async Task<IActionResult> GetAsync()
     {
@@ -38,32 +77,14 @@ public class TeamsController : GenericController<Team>
         return NotFound(response.Message);
     }
 
-    [HttpGet("combo/{countryId:int}")]
-    public async Task<IActionResult> GetComboAsync(int countryId)
+    [HttpGet("paginated")]
+    public override async Task<IActionResult> GetAsync(PaginationDTO pagination)
     {
-        return Ok(await _teamsUnitOfWork.GetComboAsync(countryId));
-    }
-
-    [HttpPost("full")]
-    public async Task<IActionResult> PostAsync(TeamDTO teamDTO)
-    {
-        var action = await _teamsUnitOfWork.AddAsync(teamDTO);
-        if (action.WasSuccess)
+        var response = await _teamsUnitOfWork.GetAsync(pagination);
+        if (response.WasSuccess)
         {
-            return Ok(action.Result);
+            return Ok(response.Result);
         }
-        return BadRequest(action.Message);
+        return BadRequest();
     }
-
-    [HttpPut("full")]
-    public async Task<IActionResult> PutAsync(TeamDTO teamDTO)
-    {
-        var action = await _teamsUnitOfWork.UpdateAsync(teamDTO);
-        if (action.WasSuccess)
-        {
-            return Ok(action.Result);
-        }
-        return BadRequest(action.Message);
-    }
-
 }
