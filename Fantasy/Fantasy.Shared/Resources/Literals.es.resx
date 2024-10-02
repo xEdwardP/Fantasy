@@ -237,4 +237,25 @@
   <data name="RecordCreatedOk" xml:space="preserve">
     <value>Registro creado con éxito.</value>
   </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>Tipo de Usuario</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Espere por favor ...</value>
+  </data>
 </root>
