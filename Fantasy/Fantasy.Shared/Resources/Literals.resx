@@ -592,7 +592,7 @@
     <value>Admin users group</value>
   </data>
   <data name="AboutText" xml:space="preserve">
-    <value>&lt;p&gt;A system where different groups of friends can make predictions about football tournaments. In Colombia, it’s called “Polla”; in Argentina, “Prode”; and in the United States, “Fantasy.” The idea is that any number of football tournaments, such as the Copa América, the World Cup, the Euro Cup, the Champions League, or the Colombian League, among others, can be registered. Groups of friends will be able to form their own “Pollas” and make predictions about the matches. Once the matches are completed and business rules are applied, the participant who accumulates the most points will win the “Fantasy,” the “Polla,” or whatever it’s called in their country.&lt;/p&gt;
+    <value>&lt;p&gt;System where different groups of friends can make predictions about soccer tournaments. The idea is that any number of soccer tournaments, such as the Copa America, World Cup, Euro Cup, Champions League, or your country's tournament, among others, can be registered. Groups of friends will be able to form their own “Fantasy” and make predictions about the matches. Once the matches have been completed and the business rules have been applied, the participant who accumulates the most points will win the “Fantasy”.&lt;/p&gt;
     
     &lt;p&gt;Each user can create multiple groups or join existing groups to participate in any football tournament enabled by the administrator. The group creator will be considered the group administrator and will be able to define the conditions for distributing the prize, for example:&lt;/p&gt;
     &lt;ul&gt;
@@ -601,13 +601,13 @@
         &lt;li&gt;10% for third place.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;br/&gt;
-    &lt;p&gt;The administrator will also have the ability to activate or deactivate members of their group. For example, if a member has not paid the corresponding amount for the “Polla,” the administrator can deactivate them, and an inactive user will not be able to enter predictions.&lt;/p&gt;
+    &lt;p&gt;The administrator will also have the ability to activate or deactivate members of their group. For example, if a member has not paid the corresponding amount for the “Fantasy,” the administrator can deactivate them, and an inactive user will not be able to enter predictions.&lt;/p&gt;
 
     &lt;p&gt;Points are awarded as follows:&lt;/p&gt;
     &lt;ul&gt;
         &lt;li&gt;5 points for guess the winner or a draw.&lt;/li&gt;
         &lt;li&gt;2 points for guess the goals of the home team.&lt;/li&gt;
-        &lt;li&gt;2 points for guess  the goals of the away team.&lt;/li&gt;
+        &lt;li&gt;2 points for guess the goals of the away team.&lt;/li&gt;
         &lt;li&gt;1 point for guess the goal difference.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;br/&gt;

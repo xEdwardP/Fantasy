@@ -70,7 +70,7 @@ namespace Fantasy.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;A system where different groups of friends can make predictions about football tournaments. In Colombia, it’s called “Polla”; in Argentina, “Prode”; and in the United States, “Fantasy.” The idea is that any number of football tournaments, such as the Copa América, the World Cup, the Euro Cup, the Champions League, or the Colombian League, among others, can be registered. Groups of friends will be able to form their own “Pollas” and make predictions about the matches. Once the matches are completed and bu [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to &lt;p&gt;System where different groups of friends can make predictions about soccer tournaments. The idea is that any number of soccer tournaments, such as the Copa America, World Cup, Euro Cup, Champions League, or your country&apos;s tournament, among others, can be registered. Groups of friends will be able to form their own “Fantasy” and make predictions about the matches. Once the matches have been completed and the business rules have been applied, the participant who accumulates the most points will win the “Fa [rest of string was truncated]&quot;;.
         /// </summary>
         public static string AboutText {
             get {
