@@ -348,4 +348,313 @@
   <data name="EmailAlreadyExists" xml:space="preserve">
     <value>The email you entered already exists.</value>
   </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="MailForwarding" xml:space="preserve">
+    <value>Mail forwarding</value>
+  </data>
+  <data name="ResendAccountActivationEmail" xml:space="preserve">
+    <value>Resend account activation email</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="PasswordChangedSuccessfully" xml:space="preserve">
+    <value>Password Changed Successfully.</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="RecoverPasswordMessage" xml:space="preserve">
+    <value>An email has been sent to you with instructions on how to recover your password.</value>
+  </data>
+  <data name="PasswordRecoveredMessage" xml:space="preserve">
+    <value>Password changed successfully, you can now log in with your new password.</value>
+  </data>
+  <data name="PasswordRecovery" xml:space="preserve">
+    <value>Password Recovery</value>
+  </data>
+  <data name="ForgottenYourPassword" xml:space="preserve">
+    <value>Have you forgotten your password?</value>
+  </data>
+  <data name="Tournament" xml:space="preserve">
+    <value>Tournament</value>
+  </data>
+  <data name="Tournaments" xml:space="preserve">
+    <value>Tournaments</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="ERR009" xml:space="preserve">
+    <value>The tournament Id is not valid.</value>
+  </data>
+  <data name="TournamentActive" xml:space="preserve">
+    <value>The tournament is active</value>
+  </data>
+  <data name="TournamentInactive" xml:space="preserve">
+    <value>The tournament is inactive</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
+  </data>
+  <data name="AddTeamToTournament" xml:space="preserve">
+    <value>Add Team To Tournament</value>
+  </data>
+  <data name="AddTeam" xml:space="preserve">
+    <value>Add Team</value>
+  </data>
+  <data name="SelectATeam" xml:space="preserve">
+    <value>-- Select a Team --</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>Visitor</value>
+  </data>
+  <data name="GoalsLocal" xml:space="preserve">
+    <value>Goals Local</value>
+  </data>
+  <data name="GoalsVisitor" xml:space="preserve">
+    <value>Goals Visitor</value>
+  </data>
+  <data name="ERR010" xml:space="preserve">
+    <value>The local Id is not valid.</value>
+  </data>
+  <data name="ERR011" xml:space="preserve">
+    <value>The visitor Id is not valid.</value>
+  </data>
+  <data name="ERR012" xml:space="preserve">
+    <value>The match Id is not valid.</value>
+  </data>
+  <data name="AddMatchToTournament" xml:space="preserve">
+    <value>Add Match to Tournament</value>
+  </data>
+  <data name="Match" xml:space="preserve">
+    <value>Match</value>
+  </data>
+  <data name="Matches" xml:space="preserve">
+    <value>Matches</value>
+  </data>
+  <data name="MatchInactive" xml:space="preserve">
+    <value>Match Inactive</value>
+  </data>
+  <data name="MatchActive" xml:space="preserve">
+    <value>Match Active</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>Select a Date...</value>
+  </data>
+  <data name="SelectTime" xml:space="preserve">
+    <value>Select a Time...</value>
+  </data>
+  <data name="MustSelectLocalTeam" xml:space="preserve">
+    <value>You must select a local team.</value>
+  </data>
+  <data name="MustSelectVisitorTeam" xml:space="preserve">
+    <value>You must select a visitor team.</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Confirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="ERR013" xml:space="preserve">
+    <value>The user Id is not valid.</value>
+  </data>
+  <data name="ERR014" xml:space="preserve">
+    <value>The group Id is not valid.</value>
+  </data>
+  <data name="ERR015" xml:space="preserve">
+    <value>The user group is not valid.</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="ERR016" xml:space="preserve">
+    <value>The prediction Id is not valid.</value>
+  </data>
+  <data name="Members" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="GroupDetails" xml:space="preserve">
+    <value>Group Details</value>
+  </data>
+  <data name="JoinGroup" xml:space="preserve">
+    <value>Join Group</value>
+  </data>
+  <data name="MyGroups" xml:space="preserve">
+    <value>My Groups</value>
+  </data>
+  <data name="NoGroups" xml:space="preserve">
+    <value>You are not part of any group. You can join a group using the URL or code shared by the group administrator, or you can view the available groups on the homepage and then ask the administrator to activate you so you can enter your predictions. You can also create your own group of friends.</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="SelectATournament" xml:space="preserve">
+    <value>-- Select a Tournament --</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Group: {0} has been created, with code: {1}, please send the group code to people who want to join this group.</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="UserAddedToGroupOk" xml:space="preserve">
+    <value>User added to the group. The user can now enter and enter their predictions.</value>
+  </data>
+  <data name="ERR017" xml:space="preserve">
+    <value>The group code is not valid.</value>
+  </data>
+  <data name="JoinExistingGroup" xml:space="preserve">
+    <value>Join an existing group</value>
+  </data>
+  <data name="ConfirmGroupMessage" xml:space="preserve">
+    <value>To join the group: {0}, click the button.</value>
+  </data>
+  <data name="CopyInvitationURLTitle" xml:space="preserve">
+    <value>Copy invitation</value>
+  </data>
+  <data name="InvitationURLCopied" xml:space="preserve">
+    <value>Group invitation link {0} copied to clipboard. Share it with your friends to join the group.</value>
+  </data>
+  <data name="Predictions" xml:space="preserve">
+    <value>Predictions</value>
+  </data>
+  <data name="Positions" xml:space="preserve">
+    <value>Positions</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="Prediction" xml:space="preserve">
+    <value>Prediction</value>
+  </data>
+  <data name="WatchPredictions" xml:space="preserve">
+    <value>Watch Predictions</value>
+  </data>
+  <data name="CloseMatch" xml:space="preserve">
+    <value>Close Match</value>
+  </data>
+  <data name="CloseMatchConfirmMessage" xml:space="preserve">
+    <value>Are you sure you want to close the match {0} Vs. {1}?</value>
+  </data>
+  <data name="CloseMatchTitle" xml:space="preserve">
+    <value>Close Match</value>
+  </data>
+  <data name="GoalsLocalError" xml:space="preserve">
+    <value>You must enter a value greater than or equal to zero in local goals.</value>
+  </data>
+  <data name="GoalsVisitorError" xml:space="preserve">
+    <value>You must enter a value greater than or equal to zero in visitor goals.</value>
+  </data>
+  <data name="ERR018" xml:space="preserve">
+    <value>This match is no longer open to predictions.</value>
+  </data>
+  <data name="RealScore" xml:space="preserve">
+    <value>Real Score</value>
+  </data>
+  <data name="PredictedScore" xml:space="preserve">
+    <value>Predicted Score</value>
+  </data>
+  <data name="PredictionsBalance" xml:space="preserve">
+    <value>Predictions Balance</value>
+  </data>
+  <data name="AdminUsersGroup" xml:space="preserve">
+    <value>Admin users group</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>&lt;p&gt;A system where different groups of friends can make predictions about football tournaments. In Colombia, it’s called “Polla”; in Argentina, “Prode”; and in the United States, “Fantasy.” The idea is that any number of football tournaments, such as the Copa América, the World Cup, the Euro Cup, the Champions League, or the Colombian League, among others, can be registered. Groups of friends will be able to form their own “Pollas” and make predictions about the matches. Once the matches are completed and business rules are applied, the participant who accumulates the most points will win the “Fantasy,” the “Polla,” or whatever it’s called in their country.&lt;/p&gt;
+    
+    &lt;p&gt;Each user can create multiple groups or join existing groups to participate in any football tournament enabled by the administrator. The group creator will be considered the group administrator and will be able to define the conditions for distributing the prize, for example:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;70% for first place.&lt;/li&gt;
+        &lt;li&gt;20% for second place.&lt;/li&gt;
+        &lt;li&gt;10% for third place.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br/&gt;
+    &lt;p&gt;The administrator will also have the ability to activate or deactivate members of their group. For example, if a member has not paid the corresponding amount for the “Polla,” the administrator can deactivate them, and an inactive user will not be able to enter predictions.&lt;/p&gt;
+
+    &lt;p&gt;Points are awarded as follows:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;5 points for guess the winner or a draw.&lt;/li&gt;
+        &lt;li&gt;2 points for guess the goals of the home team.&lt;/li&gt;
+        &lt;li&gt;2 points for guess  the goals of the away team.&lt;/li&gt;
+        &lt;li&gt;1 point for guess the goal difference.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br/&gt;
+    &lt;p&gt;The maximum points per match is 10, in the case of a perfect prediction. Please consider the following rules:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Predictions can only be entered or modified up to 10 minutes before the match starts.&lt;/li&gt;
+        &lt;li&gt;The result is based on the 90 minutes of regulation time plus any added time. Goals scored during extra time or penalties are not counted.&lt;/li&gt;
+        &lt;li&gt;Matches from the second round onwards will award double points.&lt;/li&gt;
+    &lt;/ul&gt;</value>
+  </data>
+  <data name="DoublePoints" xml:space="preserve">
+    <value>Double Points</value>
+  </data>
+  <data name="DoublePointsMatchMessage" xml:space="preserve">
+    <value>Double Points Match</value>
+  </data>
+  <data name="SinglePointsMatchMessage" xml:space="preserve">
+    <value>Single Points Match</value>
+  </data>
+  <data name="IsImageSquare" xml:space="preserve">
+    <value>Is Image Square?</value>
+  </data>
+  <data name="ImageIsSquare" xml:space="preserve">
+    <value>The image is square</value>
+  </data>
+  <data name="ImageIsRectangular" xml:space="preserve">
+    <value>The image is rectangular</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="Rectangular" xml:space="preserve">
+    <value>Rectangular</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ReOpenMatch" xml:space="preserve">
+    <value>Re-open match</value>
+  </data>
+  <data name="ReOpenMatchConfirm" xml:space="preserve">
+    <value>Are you sure to re-open the {0}: {1}?</value>
+  </data>
+  <data name="ReOpenMatchMessage" xml:space="preserve">
+    <value>The match has been reopened</value>
+  </data>
 </root>
