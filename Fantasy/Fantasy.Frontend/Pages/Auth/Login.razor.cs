@@ -53,4 +53,10 @@ public partial class Login
         await LoginService.LoginAsync(responseHttp.Response!.Token);
         NavigationManager.NavigateTo("/");
     }
+
+    private void ShowModalRecoverPassword()
+    {
+        var closeOnEscapeKey = new DialogOptions() { CloseOnEscapeKey = true, MaxWidth = MaxWidth.ExtraLarge };
+        DialogService.Show<RecoverPassword>(Localizer["PasswordRecovery"], closeOnEscapeKey);
+    }
 }
