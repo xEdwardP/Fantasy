@@ -55,14 +55,22 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=LocalConnection"));
 builder.Services.AddTransient<SeedDb>();
 builder.Services.AddScoped<IFileStorage, FileStorage>();
+
 builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<ICountriesUnitOfWork, CountriesUnitOfWork>();
+
 builder.Services.AddScoped<ITeamsRepository, TeamsRepository>();
 builder.Services.AddScoped<ITeamsUnitOfWork, TeamsUnitOfWork>();
+
 builder.Services.AddScoped<ITournamentsRepository, TournamentsRepository>();
 builder.Services.AddScoped<ITournamentsUnitOfWork, TournamentsUnitOfWork>();
+
+builder.Services.AddScoped<ITournamentTeamsRepository, TournamentTeamsRepository>();
+builder.Services.AddScoped<ITournamentTeamsUnitOfWork, TournamentTeamsUnitOfWork>();
+
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<IUsersUnitOfWork, UsersUnitOfWork>();
 
