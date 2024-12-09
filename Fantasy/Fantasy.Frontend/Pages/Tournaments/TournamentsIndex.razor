@@ -34,7 +34,11 @@ else
             <MudTh>@Localizer["Actions"]</MudTh>
         </HeaderContent>
         <RowTemplate>
-            <MudTd>@context.Name</MudTd>
+            <MudTd>
+                <MudText Style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;">
+                    @context.Name
+                </MudText>
+            </MudTd>
             <MudTd>
                 <MudImage Src="@context.ImageFull" Width="80" />
             </MudTd>
@@ -48,24 +52,28 @@ else
                     <MudIcon Icon="@Icons.Material.Filled.Cancel" Color="Color.Error" />
                 }
             </MudTd>
-            <MudTd>@context.Remarks</MudTd>
+            <MudTd>
+                <MudText Style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 340px;">
+                    @context.Remarks
+                </MudText>
+            </MudTd>
             <MudTd>
                 <MudTooltip Text="@Localizer["Teams"]">
                     <MudButton Variant="Variant.Filled"
-                                EndIcon="@Icons.Material.Filled.SportsSoccer"
-                                Color="Color.Primary"
-                                OnClick="@(() => TeamsAction(@context))" style="width: 100px;">
+                               EndIcon="@Icons.Material.Filled.SportsSoccer"
+                               Color="Color.Primary"
+                               OnClick="@(() => TeamsAction(@context))" style="width: 100px;">
                         @context.TeamsCount
                     </MudButton>
                 </MudTooltip>
-                @* <MudTooltip Text="@Localizer["Matches"]">
+                <MudTooltip Text="@Localizer["Matches"]">
                     <MudButton Variant="Variant.Filled"
-                                EndIcon="@Icons.Material.Filled.Sports"
-                                Color="Color.Success"
-                                OnClick="@(() => MatchesAction(@context))" style="width: 100px;">
+                               EndIcon="@Icons.Material.Filled.Sports"
+                               Color="Color.Success"
+                               OnClick="@(() => MatchesAction(@context))" style="width: 100px;">
                         @context.MatchesCount
                     </MudButton>
-                </MudTooltip> *@
+                </MudTooltip>
                 <MudTooltip Text="@Localizer["Edit"]">
                     <MudButton Variant="Variant.Filled"
                                Color="Color.Warning"
