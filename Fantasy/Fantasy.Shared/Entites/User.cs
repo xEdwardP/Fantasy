@@ -37,7 +37,9 @@ public class User : IdentityUser
 
     public ICollection<UserGroup>? GroupsBelong { get; set; }
 
-    public ICollection<Prediction>? Predictions { get; set; }
+    //public ICollection<Prediction>? Predictions { get; set; }
 
-    public int PredictionsCount => Predictions == null ? 0 : Predictions.Count;
+    public string PhotoFull => string.IsNullOrEmpty(Photo) ? "/images/NoImage.png" : Photo;
+
+    //public int PredictionsCount => Predictions == null ? 0 : Predictions.Count;
 }
