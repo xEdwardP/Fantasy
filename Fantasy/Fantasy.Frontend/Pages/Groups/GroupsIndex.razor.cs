@@ -30,6 +30,7 @@ public partial class GroupsIndex
     [Inject] private ISnackbar Snackbar { get; set; } = null!;
     [Inject] private NavigationManager NavigationManager { get; set; } = null!;
     [Inject] private AuthenticationStateProvider AuthenticationStateProvider { get; set; } = null!;
+
     [Inject] private IClipboardService ClipboardService { get; set; } = null!;
     [Inject] private IStringLocalizer<Parameters> Parameters { get; set; } = null!;
 
@@ -98,7 +99,7 @@ public partial class GroupsIndex
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            Snackbar.Add(Localizer[message], Severity.Error);
+            Snackbar.Add(Localizer[message!], Severity.Error);
             return;
         }
 
@@ -121,7 +122,7 @@ public partial class GroupsIndex
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            Snackbar.Add(Localizer[message], Severity.Error);
+            Snackbar.Add(Localizer[message!], Severity.Error);
             return new TableData<Group> { Items = [], TotalItems = 0 };
         }
         if (responseHttp.Response == null)
@@ -204,7 +205,7 @@ public partial class GroupsIndex
             else
             {
                 var message = await responseHttp.GetErrorMessageAsync();
-                Snackbar.Add(Localizer[message], Severity.Error);
+                Snackbar.Add(Localizer[message!], Severity.Error);
             }
             return;
         }
